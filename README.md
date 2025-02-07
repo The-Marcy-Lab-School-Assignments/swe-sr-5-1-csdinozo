@@ -12,6 +12,26 @@ Imagine you are teaching a friend about OOP. They mainly want to understand what
 * An explanation of how the code example demonstrates encapsulation
 
 ### Response 1
+_OOP_ is an acronym for **Object-Oriented Programming**. _OOP_ is a programming paradigm that uses objects to store and manage data. However, programming is much deeper than that.
+The first concept we must discuss is the four pillars that define OOP: _encapsulation_, _abstraction_, _inheritance_, and _polymorphism_.
+Today, we'll focus on **encapsulation**. Encapsulation refers to creating methods that operate on data while simultaneously restricting direct access to that data from outside the method.
+For instance, when Amazon develops Ring doorbells, they allow you to access your doorbell camera—but not everyone can, as that would cause many problems.
+The way encapsulation is achieved is creating closure.
+An example of closure
+```
+const amazon =()=>{
+    let allRingDoorbells = [];
+    const doorbells = {
+        addDoorbell(address) {
+            allRingDoorbells.push(address)
+        }
+    }
+    return doorbells
+}
+const avionteHouse = amazon()
+avionteHouse.addDoorbell(123 street)
+```
+In the example above closure is used to _hide access_ to allRingDoorbells array. Even thought the array exist it can be access inside the scope of the function unlike the methods because is create inside of a object. The contents of a object can access with dot notation. So if the function is invoked you can access its objects with dot notation.
 
 ## Prompt 2
 
@@ -19,11 +39,11 @@ The following `friendsManager` object is an example of an interface that is **NO
 
 ```js
 const friendsManager = {
- friends: [],
- addFriend(newFriend) {
-   if (typeof newFriend !== 'string') return;
-   this.friends.push(newFriend);
- }
+    friends: [],
+    addFriend(newFriend) {
+        if (typeof newFriend !== 'string') return;
+        this.friends.push(newFriend);
+    }
 }
 
 
@@ -36,6 +56,19 @@ friendsManager.friends.push(42);
 Explain how the code is not consistent or predictable, then provide an example in code that uses closure to make it more consistent and predictable.
 
 ### Response 2
+The code snippet above demonstrates unpredictable and inconsistent behavior. This friends manager object allows you to add a friend both with and without the designated method. Additionally, it grants direct access to the friends array, which means anything—not just friends—can be added.
+A better way to implement your friends manager is by using closures.
+```
+const createFriendsManager=()=>{
+    const friends = [];
+    friendsManager={
+        addFriend(newFriend) {
+            if (typeof newFriend !== "string") return;
+            this.friends.push(newFriend);
+        },
+    }
+}
+```
 
 ## Prompt 3
 
