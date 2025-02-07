@@ -77,6 +77,7 @@ With OOP in JavaScript, it's possible to use factory functions to achieve encaps
 How would you explain to a budding developer what the drawbacks of using factory functions are and why it is better to use classes instead?
 
 ### Response 3
+Although factory functions are beneficial in how they can be used repeatedly to create similar objects, it is better to use classes instead because each part of the object reserves its own space in memory. This is unlike how, in classes, each variable and method created has its own memory value, shared by all instances of the class. Classes are also advantageous in cases where inheritance will be necessary. Superclasses make available their properties and methods to their children. For factory functions, an entirely separate factory function would be necessary to create an object of the similar yet modified properties and methods, again using more space than would be necessary.While it could be more convenient to use factory functions given their simplicity in how the `new` and `this` keywords are not needed for implementation, in scalable projects for which many instances of a type of object may eventually be necessary, it is better to use classes to prevent memory storage being used unnecessarily.
 
 ## Prompt 4
 
@@ -87,6 +88,7 @@ Do some research on the history of when / how classes were introduced into JavaS
 
 
 ### Response 4
+ECMAScript 2015 (ES6, ES2015) introduced a new syntax for creating classes and their instances to Javascript. Classes were used as a substitute prototype-based inheritance, providing a more familiar syntax for object-oriented programming. Classes are a structured way to create objects and manage inheritance, allowing clean and concise implementation of objects. Class structure makes Javascript development more similar to other object-oriented, programming languages, making it easier for other developers to transition from such languages.
 
 ## Prompt 5
 
