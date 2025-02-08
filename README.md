@@ -114,3 +114,5 @@ Provide one point that advocates for the use of this syntax and then provide a c
 
 ### Response 5
 Prototype syntax is beneficial in how its lack of rigid structure allows greater flexibility for developers. Developers can add new methods and properties dynamically rather than returning to the prototype's declaration. This allows for quick updates wherever necessary, without constraining developers to a specific location where such updates can be added — anywhere post-definition is fine.
+
+Classes create a cleaner and more consistent structure by enforcing the use of keywords like `extends` and `new`. They are also encouraged in modern JavaScript OOP models, especially when working with frameworks such as React and Vue.
