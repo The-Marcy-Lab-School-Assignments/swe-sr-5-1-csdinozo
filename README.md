@@ -113,3 +113,4 @@ console.log(alice.greet());
 Provide one point that advocates for the use of this syntax and then provide a counter-argument for the use of classes instead.
 
 ### Response 5
+Prototype syntax is beneficial in how its lack of rigid structure allows greater flexibility for developers. Developers can add new methods and properties dynamically rather than returning to the prototype's declaration. This allows for quick updates wherever necessary, without constraining developers to a specific location where such updates can be added — anywhere post-definition is fine.
